@@ -1,0 +1,226 @@
+body{
+    background: rgb(171, 207, 179); 
+    margin-bottom: 3%;
+}
+
+    .table {
+    
+
+    }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+     }
+.cell {
+    width: 4em;
+    height: 4em;
+    position: relative;
+}
+.light{
+    background-image: url(https://chess-samara.ru/i/board/green_white_cell.jpg);
+}
+.dark{
+    background-image: url(https://chess-samara.ru/i/board/green_black_cell.jpg);
+}
+
+table {
+    margin: auto;
+    border-spacing: 0;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+}
+
+.num {
+    float: left;
+    top: 0;
+    padding-left: 0;
+    margin-left: 0;
+    padding-top: 0;
+    margin-top: 0;
+    font-size: 1em;
+}
+
+.pic{
+    color:#ffffff;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 0.15em;
+}
+
+.down{
+    color:#ffffff;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-right: 0.15em;
+}
+
+.top{
+    z-index: 9;
+}
+.rule{ 
+    min-width: 800px;
+    background-color: #847462;
+    color: #ffffff;
+    text-align: center;
+    padding: 0 20px;
+}
+.site-footer {
+    min-width: 800px;
+    background-color: #847462;
+    color: #ffffff;
+  }
+  
+  .site-footer .container {
+    text-align: center;
+  }
+  .site-footer p {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 20px;
+  }
+  
+  .timer {
+    color: white;
+    position: auto;
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .but {
+    border: none;
+    background-color: inherit;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    justify-content: center;
+   
+  }
+
+ .timerr
+ {
+    margin-left: auto;
+    margin-right: auto;
+     width: 200px;
+     height: 200px;
+     border-radius: 50%;
+     background-color:rgb(171, 207, 179);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     overflow: hidden;
+     position: relative;
+ }
+ .timerr:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height:100%;
+    z-index: 3;
+    background-color:rgb(171, 207, 179);
+    animation: mask_left 30s steps(1,end) forwards ;
+ }
+ .timerr:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height:100%;
+    z-index: 3;
+    background-color: #956b6b;
+    animation: mask_right 30s steps(1,end) forwards ;
+ }
+ .timer__line{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    animation:line 30s linear forwards;
+ }
+ .timer__line:after{
+ content: "";
+ position: absolute;
+ top:0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #956b6b;
+ }
+ .timer__body
+ {
+     width: 100px;
+     height: 100px;
+     border-radius: 50%;
+     background-color: rgb(171, 207, 179);
+     text-align: center;
+     overflow: hidden;
+     z-index: 4;
+ }
+ .timer__counter
+ {
+  animation: counter 30s steps(29,end) forwards;
+ }
+ .timer__counter span
+ {
+     color: #ffffff;
+        font-size: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+ }
+
+ @keyframes counter{
+     0%{
+
+     }
+     100%{
+         transform: translate(0px, -2900px);
+     }
+ }
+
+ @keyframes line{
+    0%{
+
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes mask_left{
+    0%{
+        visibility: visible;
+    }
+    50%,
+    100%{
+        visibility: hidden;
+    }
+}
+ 
+@keyframes mask_right{
+    0%{
+        visibility: hidden;
+    }
+    50%,
+    100%{
+        visibility: visible;
+    }
+}
